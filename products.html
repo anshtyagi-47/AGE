@@ -4,9 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Products Page Specific CSS -->
+    <link rel="stylesheet" href="css/products-new.css" />
   </head>
   <body>
+    <header>
+      <nav class="nav collapsible">
+        <div class="header__contact-info">
+          <a href="mailto:agenter14@gmail.com"
+            ><i class="fa-solid fa-envelope"></i> agenter14@gmail.com</a
+          >
+          <a href="tel:+919888126530"
+            ><i class="fa-solid fa-phone"></i> 9888126530</a
+          >
+        </div>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content" id="nav-list">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="products.html">Products</a></li>
+          <li class="nav__item"><a href="about.html">About Us</a></li>
+          <li class="nav__item"><a href="contact.html">Contact Us</a></li>
+          <li class="nav__item"><a href="brochure.html">Brochures</a></li>
+        </ul>
+      </nav>
+    </header>
     <section data-aos="fade-up" class="block container block-domain">
         <header class="block__header">
           <h2>Find the Right Tool for Your Requirements</h2>
@@ -17,20 +46,10 @@
         </header>
         <div class="input-group">
           <input type="text" class="input" placeholder="Requirement..." />
-          <button class="btn btn--primary">
-            <svg class="icon icon--white">
-              <use xlink:href="images/sprite.svg#search"></use></svg
-            >Search
+          <button class="btn btn--primary" id="search-btn">
+            <i class="fas fa-search"></i> Search
           </button>
         </div>
-        <ul class="list block-domain__prices">
-          <li>Endmills</li>
-          <li>Holder</li>
-          <li>Drill</li>
-          <li>Spindle</li>
-          <li>Collet</li>
-          <li>Balnnose</li>
-        </ul>
       </section>
     <section data-aos="fade-up" class="block container block-plans">
         <div class="grid grid--1x4">
@@ -44,7 +63,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -60,7 +79,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -74,7 +93,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -88,7 +107,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -102,7 +121,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -116,7 +135,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -130,7 +149,7 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
@@ -144,11 +163,31 @@
                   <li class="list__item">100 GB SSD Sotrage</li>
                   <li class="list__item">3 GB RAM</li>
                 </ul>
-                <button class="btn btn--outline btn--block">Buy Now</button>
+                <button class="btn btn--outline btn--block btn-product">Buy Now</button>
               </div>
             </div>
           </div>
         </div>
-  
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main JS -->
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+
+      // Collapsible functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const collapsible = document.querySelector('.collapsible');
+        const toggler = document.querySelector('.nav__toggler');
+        
+        toggler.addEventListener('click', function() {
+          collapsible.classList.toggle('collapsible--expanded');
+        });
+      });
+    </script>
   </body>
 </html>
