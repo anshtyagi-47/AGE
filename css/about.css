@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
   }
   .containerabout{
-    padding: 2rem;
+    margin: 2rem;
   }
   .page-header {
     background: var(--color-primary);

@@ -1127,6 +1127,7 @@ a {
   padding: 1.2rem 2rem;
   cursor: pointer;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
@@ -1500,8 +1501,19 @@ a {
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 6rem 2rem; 
   height: 60vh;
+  background-image: url('../images/Ansh_Tyagi_“Flat-style_hero_banner_illustration_for_a_CNC_and_VMC_tools_webs_efc5fa89-8b5b-4d4c-b197-59252d6095fa.png');
+  background-size: contain;   /* Shows full image */
+  background-repeat: no-repeat;
+  background-position:right center;
+}
+.hero__btn{
+  margin-left:2rem;
+  margin-top: 2rem;
+}
+.hero__logo{
+  width: 220px;
+  height: 220px;
 }
 
 .hero::before {
@@ -1511,57 +1523,47 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/IMG-20250203-WA0037.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.35;
-  z-index: -1;
-  filter: brightness(1.05) contrast(1.1);
   transition: opacity 0.5s ease;
+  pointer-events: none; 
 }
 
 .hero .container {
+  display: flex;
+  justify-content: flex-start; /* Keep content on left */
+  align-items: center;
   width: 100%;
-  position: relative;
-  z-index: 2;
 }
 
-.hero__image {
-  display: none;
+.hero__content {
+  flex: 0 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align logo, text, and button to left */
 }
 
 .hero__title-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Left align logo + title */
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-top: 1.5rem;
 }
-
-.hero__logo {
-  width: 30rem;
-  height: 30rem;  
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease;
-}
-
-.hero__logo:hover {
-  transform: scale(1.05);
-}
-
-.hero__tagline {
+.hero__tagline{
   font-size: 3rem;
-  color: #2C2C2C;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin: 1.5rem 0 2rem; /* Reduce vertical margin */
-  transition: all 0.3s ease;
-  line-height: 1.4;
+  padding-left: 3rem;
+  color: var(--color-headings);
+}
+.hero__tagline,
+.hero a.btn {
+  align-self: flex-start; /* Button and tagline align to left */
+}
+.hero > .container {
+  padding-left: 1rem;
+  margin-left: 1rem;
+  max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -1579,6 +1581,9 @@ a {
 }
 
 /* Domain Block */
+.who-we-are{
+  padding: 0 4rem;
+}
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
@@ -1675,17 +1680,17 @@ a {
 
 /* Footer */
 .footer {
-  background: #232323;
+  background-color: #393939;
   padding-top: 10rem;
 }
 
 .footer a {
-  color: #777;
+  color: #fff;
   transition: color 0.3s;
 }
 
 .footer a:hover {
-  color: #fff;
+  color:var(--color-accent);
 }
 
 .footer__section {
@@ -1708,13 +1713,17 @@ a {
 .footer__brand img {
   height: 200px;
   width: 200px;
+  transform:scale(1.1);
 }
 
 .footer__copyright {
   margin-top: 0;
+  padding-right: 25px;
   font-size: 2.4rem;
   color: #fff;
   opacity: 0.3;
+  font-weight: 600;
+  display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
@@ -1749,6 +1758,7 @@ a {
 
   .footer__heading {
     font-size: 1.8rem;
+    color: var(--color-accent) !important;
   }
 }
 
@@ -1791,6 +1801,7 @@ a {
 .btn--secondary:hover {
   background: linear-gradient(135deg, #4682B4, #607D8B) !important;
   transform: translateY(-3px);
+  color: #fff !important;
   box-shadow: 0 8px 25px rgba(96, 125, 139, 0.4);
 }
 
@@ -2216,11 +2227,5 @@ a {
 }.footer__map{
     margin-top: 1rem;
     border-radius: 10px;
-    opacity: 0.3;
     transition: all 0.3s ease;
 }
-.footer__map:hover{
-    opacity: 1;
-    transform: translateY(-5px);
-}
-    
