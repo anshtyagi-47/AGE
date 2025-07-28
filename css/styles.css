@@ -708,7 +708,6 @@ a {
 
 .list--tick .list__item {
   padding-left: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -818,7 +817,7 @@ a {
 }
 
 .btn--outline:hover {
-  background: var(--color-headings);
+  background: var(--color-primary);
   color: #fff;
 }
 
@@ -882,7 +881,6 @@ a {
   overflow: visible;
 }
 
-.card__header,
 .card__body {
   padding: 2rem 7%;
 }
@@ -911,8 +909,12 @@ a {
 }
 
 .plan .list__item {
-  margin-bottom: 2rem;
+  font-size: 2rem;
 }
+.plan .list__item :nth-last-child(1){
+  margin-bottom: 2px;
+}
+
 
 .plan--popular .card__header {
   position: relative;
@@ -1069,14 +1071,14 @@ a {
 }
 
 .callout--primary {
-  background: var(--color-primary);
+  background: var(--color-accent);
   color: #fff;
 }
 
 .callout__heading {
   color: #fff;
   margin-top: 0;
-  font-size: 3.4rem;
+  font-size: 2.5rem;
 }
 
 .callout .btn {
@@ -1249,8 +1251,8 @@ a {
 
 /* Blocks */
 .block {
-  --padding-vertical: 5rem;
-  padding: var(--padding-vertical) 2rem;
+  --padding-vertical: 2rem;
+  padding: 10rem 0 2rem 0;
 }
 
 .block__header {
@@ -1809,7 +1811,7 @@ a {
 }
 
 .btn--outline:hover {
-  background: linear-gradient(135deg, var(--color-headings), #1a1a1a) !important;
+  background: var(--color-primary);
   color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(44, 44, 44, 0.4);
@@ -2211,4 +2213,14 @@ a {
     max-width: 800px;
     margin: 0 auto;
   }
+}.footer__map{
+    margin-top: 1rem;
+    border-radius: 10px;
+    opacity: 0.3;
+    transition: all 0.3s ease;
 }
+.footer__map:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+}
+    
