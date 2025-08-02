@@ -43,9 +43,9 @@
             ><i class="fa-solid fa-phone"></i> 9888126530</a
           >
         </div>
-        <svg class="icon icon--white nav__toggler">
-          <use xlink:href="images/sprite.svg#menu"></use>
-        </svg>
+        <div class="nav__toggler" >
+          <i class="fa-solid fa-bars"></i>
+        </div>
         <ul class="list nav__list collapsible__content" id="nav-list">
           <li class="nav__item"><a href="index.html">Home</a></li>
           <li class="nav__item"><a href="products.html">Products</a></li>
@@ -101,7 +101,7 @@
           Reamers, DS Cutters, Step Reamers, Long Drills, Slitting Cutters,
           Boring Tools, and Form Tools as per customer drawings. 
         </p>
-        <a href="about.html" class="link-arrow">Learn About Company</a>
+        <a href="about.html" class="link-arrow">Learn More</a>
       </div>
       <div class="about-image">
         <img src="images/Metalworking_CNC_milling_machine1.jpg" alt="" />
@@ -117,8 +117,7 @@
           your production sharp, consistent, and efficient.
         </p>
       </div>
-
-      <div class="grid grid--1x3" data-aos="fade-up" data-aos-delay="100">
+      <div class="grid grid--1x3" id="features"data-aos="fade-up" data-aos-delay="100">
         <div class="feature-card card-1">
           <div class="feature-card__icon">
             <i class="fas fa-tachometer-alt"></i>
@@ -183,15 +182,15 @@
         </div>
       </div>
     </section>
-    <section class="block container">
-      <header class="block__header">
+    <section class="block container"data-aos="fade-up">
+      <header class="block__header"data-aos="fade-up">
         <h2>OUR PRODUCT RANGE</h2>
       </header>
-      <div class="grid grid--1x3" id="products">
+      <div class="product-range" id="products">
         <div class="collapsible-group">
           <div class="collapsible">
             <header class="collapsible__header">
-              <h2 class="collapsible__heading"><b>Solid Carbide Tools</b></h2>
+              <h2 class="collapsible__heading">Solid Carbide Tools</h2>
               <svg class="icon icon--white collapsible__chevron">
                 <use xlink:href="images/sprite.svg#chevron"></use>
               </svg>
@@ -207,7 +206,7 @@
           </div>
           <div class="collapsible">
             <header class="collapsible__header">
-              <h2 class="collapsible__heading"><b>Drilling</b></h2>
+              <h2 class="collapsible__heading">Drilling</h2>
               <svg class="icon icon--white collapsible__chevron">
                 <use xlink:href="images/sprite.svg#chevron"></use>
               </svg>
@@ -226,7 +225,7 @@
           </div>
         <div class="collapsible">
             <header class="collapsible__header">
-              <h2 class="collapsible__heading"><b>Milling Tools</b></h2>
+              <h2 class="collapsible__heading">Milling Tools</h2>
               <svg class="icon icon--white collapsible__chevron">
                 <use xlink:href="images/sprite.svg#chevron"></use>
               </svg>
@@ -245,7 +244,7 @@
         <div class="collapsible-group">
           <div class="collapsible">
             <header class="collapsible__header">
-              <h2 class="collapsible__heading"><b>Chamfer Tools</b></h2>
+              <h2 class="collapsible__heading">Chamfer Tools</h2>
               <svg class="icon icon--white collapsible__chevron">
                 <use xlink:href="images/sprite.svg#chevron"></use>
               </svg>
@@ -305,9 +304,6 @@
               </ul>
             </div>
           </div>
-          <div style="margin: 2rem 0; text-align: center;">
-            <a href="products.html" class="link-arrow">VIEW ALL</a>
-          </div>
         </div>
         <div class="collapsible-group">
           <div class="collapsible">
@@ -365,6 +361,9 @@
         </div>
       </div>
     </section>
+    <div style="margin: 4rem 0; text-align: center;">
+      <a href="products.html" class="link-arrow">VIEW ALL</a>
+    </div>
     <!-- Our Clients Section -->
     <section class="block container clients-section" data-aos="fade-up" id="clients">
       <div class="block__header" ">
@@ -444,7 +443,7 @@
         <div class="grid grid--1x2">
           <div class="callout__content">
             <h2 class="callout__heading">Ready to Optimize Your Machining Process?</h2>
-            <p>
+            <p class="callout__tagline">
               Our team is here to assist you with expert guidance and tailored tooling solutions. Send us a message we'll respond promptly with the details you need.
             </p>
           </div>
