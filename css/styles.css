@@ -536,7 +536,7 @@
     .hero__logo {
       width: 50px;
       height: 50px;
-      transform: scale(2);
+      transform: scale(2.5);
     }
 
     .block__heading {
@@ -643,7 +643,7 @@
    padding:0 2rem;
   }
   .about-section{
-  gap:2rem;
+  gap:1rem;
   background-image: url(../images/Metalworking_CNC_milling_machine1.jpg);
   background-repeat: no-repeat;
   background-size: cover;   /* makes it fit */
@@ -752,6 +752,7 @@
  .block.container h2:first-child {
     margin-top: 4rem;
     font-size: 3rem;
+    padding: 0 2rem;
 }
  .featured-section .block__header p {
   font-size:1.5rem;
@@ -766,6 +767,7 @@
    }
     .featured-section .block__header p {
     font-size: 1.8rem;
+    padding: 15px;
     }
     .feature-card__title {
     font-size:2rem;
@@ -776,6 +778,10 @@
 }
     .feature-card p {
       font-size: 1.5rem;
+    }
+    .product-range {
+    margin-top: 4rem;
+    padding:0 1rem;
     }
 }
   #products .collapsible {
@@ -1762,7 +1768,4 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  .link-arrow {
-    font-size:1.2rem;
-}
     }
