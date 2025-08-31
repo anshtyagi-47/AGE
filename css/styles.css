@@ -1640,12 +1640,13 @@
   .callout .grid--1x2 {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 1.5rem;
+    gap:0;
   }
 
   .callout .btn {
     margin: 1rem auto 0 auto;
     justify-content: center;
+    font-size: 1.5rem;
   }
 
   .callout__content {
