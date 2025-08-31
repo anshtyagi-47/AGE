@@ -1768,4 +1768,7 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+   .link-arrow.footrow {
+  font-size: 1.4rem !important;
+}
     }
