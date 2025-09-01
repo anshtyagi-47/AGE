@@ -667,7 +667,7 @@
    padding:0 2rem;
   }
   .about-content{
-    height: 380px;
+    height: 400px;
   }
   .about-section{
   gap:1rem;
@@ -837,6 +837,7 @@
     justify-content: space-between;
     align-items: center;
     transition: all 0.3s ease;
+    gap:0.1rem;
   }
 
   #products .collapsible__header:hover {
