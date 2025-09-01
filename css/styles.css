@@ -846,11 +846,11 @@
 
   #products .collapsible__heading {
     color: white;
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
     margin: 0;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
   }
 
   #products .collapsible__chevron {
